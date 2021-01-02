@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2014, ControlsFX
+ * Copyright (c) 2014, 2020, ControlsFX
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -69,7 +69,7 @@ public class VersionChecker {
         // 8.0.20 (controlsFXSpecTitle of Java 8u20), which means that ControlsFX will only work on JavaFX 8u20
         // and later versions.
         
-        if (controlsFXSpecVersion == null) {
+        if (controlsFXSpecVersion == null || javaFXVersion == null || javaFXVersion.equals("")) {
             // FIXME temporary fix to allow ControlsFX to work when run inside
             // an IDE (i.e. for developers of ControlsFX).
             return;
